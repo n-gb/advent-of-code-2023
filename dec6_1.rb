@@ -8,7 +8,7 @@ record_distances = data.last.scan(/\d+/)
 ways_to_win = (0...race_times.length).map do |race_index|
   ways_to_win_race = 0
 
-  (1..race_times[race_index].to_i).each do |seconds|
+  (1...race_times[race_index].to_i).each do |seconds|
     speed = seconds
     time = race_times[race_index].to_i - seconds
     distance = speed * time
